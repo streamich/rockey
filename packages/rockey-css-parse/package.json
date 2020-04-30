@@ -26,7 +26,8 @@
     "stylis": "^2.0.4"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "snyk": "^1.316.1"
   },
   "files": [
     "mixins",
@@ -40,6 +41,9 @@
   ],
   "scripts": {
     "dev": "node tasks/prepublish.js --watch",
-    "transpile": "node tasks/prepublish.js"
-  }
+    "transpile": "node tasks/prepublish.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
