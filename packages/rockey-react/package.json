@@ -38,15 +38,19 @@
     "classnames": "^2.2.5",
     "is-react-prop": "^0.1.2",
     "lodash": "^4.17.4",
-    "rockey": "^0.0.15-1"
+    "rockey": "^0.0.15-1",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "dev": "node tasks/prepublish.js --watch",
-    "transpile": "node tasks/prepublish.js"
+    "transpile": "node tasks/prepublish.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "recompose": "^0.23.1"
-  }
+  },
+  "snyk": true
 }
